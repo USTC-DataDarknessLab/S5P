@@ -57,22 +57,22 @@ Parameters:
 ## Citation
 
 ```
-@article{10.1145/3654965,
-author = {Ding, Zezhong and Xiang, Yongan and Wang, Shangyou and Xie, Xike and Zhou, S. Kevin},
-title = {Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning},
-year = {2024},
-issue_date = {June 2024},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {2},
-number = {3},
-url = {https://doi.org/10.1145/3654965},
-doi = {10.1145/3654965},
-journal = {Proc. ACM Manag. Data},
-month = {may},
-articleno = {162},
-numpages = {27},
-keywords = {distributed systems, graph partitioning, streaming partitioning}
+@article{S5P,
+  author = {Ding, Zezhong and Xiang, Yongan and Wang, Shangyou and Xie, Xike and Zhou, S. Kevin},
+  title = {Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning},
+  year = {2024},
+  issue_date = {June 2024},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {2},
+  number = {3},
+  url = {https://doi.org/10.1145/3654965},
+  doi = {10.1145/3654965},
+  journal = {Proc. ACM Manag. Data},
+  month = {may},
+  articleno = {162},
+  numpages = {27},
+  keywords = {distributed systems, graph partitioning, streaming partitioning}
 }
 ```
 
