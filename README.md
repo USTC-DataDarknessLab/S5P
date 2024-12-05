@@ -53,6 +53,13 @@ Parameters:
 * WB: https://law.di.unimi.it/webdata/webbase-2001/
 * Synthetic Graphs (R-MAT/TrillionG): https://github.com/chan150/TrillionG (SIGMOD'17)
 
+## Experiments on PowerGraph
+- We do experiments on the PowerGraph which is a distributed graph computing system.
+- PowerGraph is a graph computating system published at the OSDI conference in 2012. Due to its inclusion of various traditional graph algorithms and support for distributed computing, it continues to serve as a baseline comparison for many papers today, or is used to validate the effectiveness of certain algorithms through PowerGraph.
+- However, because PowerGraph has not been maintained for a long time, it is currently impossible to compile directly from the source code on GitHub, primarily due to broken URLs of third-party libraries. Recently, as our paper utilized the PG computation framework, we encountered many challenges. We are documenting this experience to assist others who may need to use PG for testing in the future.
+  - **Updated PowerGraph GitHub link**: [GitHub - BearBiscuit05/PowerGraph_update](https://link.zhihu.com/?target=https%3A//github.com/BearBiscuit05/PowerGraph_update)
+  - **Original PowerGraph GitHub link**: [https://github.com/jegonzal/PowerGraph](https://link.zhihu.com/?target=https%3A//github.com/jegonzal/PowerGraph)
+
 ## Citation
 
 ```
