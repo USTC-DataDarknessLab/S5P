@@ -8,10 +8,8 @@ private:
 
 public:
     int k;
-    int hashNum;
-    float alpha;
-    double beta;
     double tao;
+    double tau;
     int batchSize;
     int threads;
     int partitionNum;

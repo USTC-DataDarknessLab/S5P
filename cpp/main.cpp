@@ -1,9 +1,6 @@
-// #include "globalConfig.h"
-// #include "StreamCluster.h"
-// #include "ClusterGameTask.h"
 #include "Partitioner.h"
 
-//TODO:输入定义为全局变量 仿造德国人格式输入
+
 
 void printParaInfo(GlobalConfig& configInfo) {
     std::cout << "input graph: " << configInfo.inputGraphPath << std::endl;
@@ -11,9 +8,6 @@ void printParaInfo(GlobalConfig& configInfo) {
     std::cout << "eCount: " << configInfo.eCount << std::endl;
     std::cout << "averageDegree: " << configInfo.getAverageDegree() << std::endl;
     std::cout << "partitionNum: " << configInfo.partitionNum << std::endl;
-    std::cout << "alpha: " << configInfo.alpha << std::endl;
-    std::cout << "beta: " << configInfo.beta << std::endl;
-    std::cout << "k: " << configInfo.k << std::endl;
     std::cout << "batchSize: " << configInfo.batchSize << std::endl;
     std::cout << "partitionNum: " << configInfo.partitionNum << std::endl;
     std::cout << "threads: " << configInfo.threads << std::endl;
@@ -21,15 +15,12 @@ void printParaInfo(GlobalConfig& configInfo) {
 }
 
 using namespace std;
-std::string inputGraphPath = "/raid/bear/tmp/com_or.bin";
 
 int main() {
     omp_set_num_threads(THREADNUM);
     GlobalConfig configInfo("./project.properties");
-    configInfo.inputGraphPath = inputGraphPath;
-
-
-    auto start = std::chrono::high_resolution_clock::now();
+    configInfo.inputGraphPath.erase(std::remove(configInfo.inputGraphPath.begin(), configInfo.inputGraphPath.end(), '\r'), configInfo.inputGraphPath.end());
+    std::chrono::high_resolution_clock::now();
     int threads = 4;
     std::vector<std::thread> threadPool;
     std::vector<std::future<void>> futureList;
@@ -40,7 +31,6 @@ int main() {
     auto ClusterStartTime = std::chrono::high_resolution_clock::now();
     StreamCluster streamCluster(configInfo);
     auto InitialClusteringTime = std::chrono::high_resolution_clock::now();
-    
     streamCluster.startStreamCluster();
     std::cout << "Big clustersize:" << streamCluster.getClusterList_B().size() << std::endl;
     std::cout << "Small clustersize:" << streamCluster.getClusterList_S().size()<< std::endl;

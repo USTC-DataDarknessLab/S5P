@@ -332,7 +332,7 @@ double ClusterGameTask::computeCost(int clusterId, int partition, const std::str
         if (partition != old_partition)
             loadPart = partitionLoad[partition] + streamCluster->getEdgeNum(clusterId, clusterId);
         edgeCutPart -= this->newClusterNeighbours[clusterId];
-        double alpha = config->alpha, k = config->partitionNum;
+        double k = config->partitionNum;
         double m = streamCluster->getEdgeNum(clusterId, clusterId);
         double Cost = beta_B / k * loadPart * m +  edgeCutPart   + m;
         return Cost;
@@ -344,7 +344,7 @@ double ClusterGameTask::computeCost(int clusterId, int partition, const std::str
         if (partition != old_partition)
             loadPart = partitionLoad[partition] + streamCluster->getEdgeNum(clusterId, clusterId);
         edgeCutPart -= this->newClusterNeighbours[clusterId];
-        double alpha = config->alpha, k = config->partitionNum;
+        double k = config->partitionNum;
         double m = streamCluster->getEdgeNum(clusterId, clusterId);
         double Cost = beta_S / k * loadPart * m + edgeCutPart  +  m;
         return Cost;
@@ -356,7 +356,7 @@ double ClusterGameTask::computeCost(int clusterId, int partition, const std::str
         if (partition != old_partition)
             loadPart = partitionLoad[partition] + streamCluster->getEdgeNum(clusterId, clusterId);
         edgeCutPart -= this->newClusterNeighbours[clusterId];
-        double alpha = config->alpha, k = config->partitionNum;
+        double k = config->partitionNum;
         double m = streamCluster->getEdgeNum(clusterId, clusterId);
         double Cost = beta / k * loadPart * m +  edgeCutPart   + m;
         return Cost;

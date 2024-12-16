@@ -14,7 +14,7 @@ Partitioner::Partitioner(StreamCluster& streamCluster, GlobalConfig config)
    }
 
 void Partitioner::performStep() {
-    double maxLoad = config.eCount / config.partitionNum * config.alpha;
+    double maxLoad = config.eCount / config.partitionNum * config.tau;
     std::string inputGraphPath = config.inputGraphPath;
     std::pair<int,int> edge(-1,-1);
     TGEngine tgEngine(inputGraphPath,config.vCount,config.eCount);

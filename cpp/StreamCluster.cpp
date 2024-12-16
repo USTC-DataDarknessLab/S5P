@@ -34,7 +34,6 @@ void StreamCluster::startStreamCluster() {
     TGEngine tgEngine(inputGraphPath,config.vCount,config.eCount);
     int cachePtr = 0;
     std::vector<std::unordered_map<std::string , int>> maplist;
-
     while (-1 != tgEngine.readline(edge)) {
         int src = edge.first;
         int dest = edge.second;
@@ -125,7 +124,6 @@ void StreamCluster::startStreamCluster_MAP() {
     int clusterID_B = 0;
     int clusterID_S = 0;
     int clusterNUM = config.vCount;
-    std::cout << "start read Streaming Clustring..." << std::endl;
     std::string inputGraphPath = config.inputGraphPath;
     std::string line;
     std::pair<int,int> edge(-1,-1);

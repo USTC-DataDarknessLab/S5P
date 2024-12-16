@@ -19,16 +19,16 @@ GlobalConfig::GlobalConfig(std::string filepath) {
         properties[key] = value;
     }
 
-    hashNum = std::stoi(properties["hashNum"]);
-    alpha = std::stof(properties["alpha"]);
-    beta = std::stod(properties["beta"]);
-    tao = std::stod(properties["tao"]);
+    // hashNum = std::stoi(properties["hashNum"]);
+    tau = std::stod(properties["tau"]);
+    // beta = std::stod(properties["beta"]);
+    tao = 1.0;
     batchSize = std::stoi(properties["batchSize"]);
     threads = std::stoi(properties["threads"]);
     partitionNum = std::stoi(properties["partitionNum"]);
     vCount = std::stoi(properties["vCount"]);
     eCount = std::stod(properties["eCount"]);
-    k = std::stoi(properties["k"]);
+    k = partitionNum;
     inputGraphPath = properties["inputGraphPath"];
 }
 

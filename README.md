@@ -17,7 +17,7 @@ sudo apt-get install libgoogle-glog-dev libgflags-dev libboost-all-dev cmake g++
 
 ## Build Programs
 ```
-#C++
+# C++
 cd cpp
 mkdir build && cd build
 cmake ..
@@ -25,19 +25,20 @@ make
 ```
 
 ```
-#java
-cd Java
-#Details in Java Folder
+# java
+- Details in Java Folder
 ```
+
+
 
 ## Usage
 Parameters:
-* `filename(inputGraphPath)`: path to the edge list file
+* `inputGraphPath`: path to the edge list file, e.g., `./dataset/testgraph.bin`. The edge list file should be in the binary format, separate using `\t`. The convert code (`convert2binary.cpp`) is in the `dataset` folder.
 * `Vcount`: $|V|$
 * `Ecount`: $|E|$
-* `batchsize`: default: 1000
-* `the number of partitions`: $partitionNum$
-* `Skewness coefficient`: $\tau$($\beta$)
+* `batchsize`: default: 10
+* `partitionNum`: the number of partitions, default: 32
+* `tau`: load balance constraint $\tau$, default: 1.0
 
 ## Data sets used in the paper
 * OK: https://snap.stanford.edu/data/com-Orkut.html
