@@ -33,7 +33,7 @@ make
 
 ## Usage
 Parameters:
-* `inputGraphPath`: path to the edge list file, e.g., `./dataset/testgraph.bin`. The edge list file should be in the binary format, separate using `\t`. The convert code (`convert2binary.cpp`) is in the `dataset` folder.
+* `inputGraphPath`: path to the edge list file, e.g., `./dataset/testgraph.bin`. The edge list file should be in the binary format, separate using `\t`. The converting code (`convert2binary.cpp`) is in the `dataset` folder.
 * `Vcount`: $|V|$
 * `Ecount`: $|E|$
 * `batchsize`: default: 10
